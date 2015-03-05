@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btn_forward"
+        android:text="@string/l"
+        android:onClick="onBtnLeftPressed" />
+
+    <!-- layout_width = 375dp / layout_height = 500dp -->
+
+    <TextView
+        android:id="@+id/tv_timer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_start1"
+        android:layout_alignBottom="@+id/btn_start1"
+        android:layout_toRightOf="@+id/btn_stop1"
+        android:layout_marginLeft="30dp"
+        android:text="@string/timer_default"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnRightPressed"
+        android:text="R"
+        android:layout_below="@+id/pixelGridView"
+        android:layout_alignRight="@+id/pixelGridView"
+        android:layout_alignEnd="@+id/pixelGridView" />
+
+    <Button
+        android:id="@+id/btn_forward"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnForwardPressed"
+        android:text="D"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btn_right"
+        android:layout_toStartOf="@+id/btn_right" />
+
+    <com.mdp_grp12.arcm.PixelGridView
+        android:id="@+id/pixelGridView"
+        android:layout_width="406dp"
+        android:layout_height="541dp"
+        android:layout_below="@+id/btn_start1"
+        android:layout_marginTop="60dp"
+        android:layout_above="@+id/btn_forward"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="30dp" />
+
+    <!--  
+    <Button
+        android:id="@+id/btn_start1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pixelGridView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="@string/start" />
+        -->
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:onClick="onBtnUpdatePressed"
+        android:layout_above="@+id/btn_left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btn_start1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+       	android:layout_toRightOf="@+id/tv_exploration_time"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/start"
+        android:onClick="onBtnStart1Pressed" />
+
+    <Button
+        android:id="@+id/btn_f1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f1"
+        android:onClick="onBtnF1Pressed"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tv_status"
+        android:layout_toEndOf="@+id/tv_status" />
+
+    <Button
+        android:id="@+id/btn_f2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f2"
+        android:onClick="onBtnF2Pressed"
+        android:layout_below="@+id/btn_f1"
+        android:layout_alignLeft="@+id/btn_f1"
+        android:layout_alignStart="@+id/btn_f1" />
+
+    <ToggleButton
+        android:id="@+id/togglebtn_update"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textOff="@string/manual"
+        android:textOn="@string/auto" 
+        android:onClick="onTogglebtnUpdatePressed"
+        android:layout_above="@+id/btn_stop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tv_exploration_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/exploration_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_stop1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pixelGridView"
+        android:layout_toRightOf="@+id/btn_start1"
+        android:text="@string/stop"
+        android:onClick="onBtnStop1Pressed"
+         />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="500dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/reset" 
+        android:onClick="onBtnResetPressed"/>
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="U"
+        android:onClick="onBtnStopPressed"
+        android:layout_above="@+id/btn_right"
+        android:layout_toLeftOf="@+id/btn_right"
+        android:layout_toStartOf="@+id/btn_right" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Position"
+        android:id="@+id/button"
+        android:onClick="robopos"
+        android:layout_above="@+id/btn_f1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:id="@+id/xpos"
+        android:layout_below="@+id/btn_reset"
+        android:layout_alignRight="@+id/btn_f1"
+        android:layout_alignEnd="@+id/btn_f1"
+        android:layout_above="@+id/ypos"
+        android:layout_toRightOf="@+id/tv_status"
+        android:layout_toEndOf="@+id/tv_status" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="y"
+        android:id="@+id/ypos"
+        android:layout_alignTop="@+id/pixelGridView"
+        android:layout_toRightOf="@+id/tv_status"
+        android:layout_alignRight="@+id/xpos"
+        android:layout_alignEnd="@+id/xpos" />
+
+
+</RelativeLayout>
